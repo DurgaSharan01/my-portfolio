@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durga Sharan - AI Strategist & Business Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.85;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .experience-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+        }
+
+        .timeline-item h3 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item h4 {
+            color: #764ba2;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .date {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .timeline-item ul {
+            margin-left: 1.5rem;
+            color: #666;
+        }
+
+        .timeline-item ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: scale(1.05);
+        }
+
+        .cert-card h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content h2 {
+                font-size: 1.3rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">DS</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Durga Sharan</h1>
+            <h2>AI Strategist | Business Developer | Marketing Enthusiast</h2>
+            <p>Driving Growth and Innovation through AI-Enabled Solutions at YugasaBot</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p style="font-size: 1.3rem; font-weight: 600; color: #667eea; margin-bottom: 1.5rem;">Bridging Business Strategy with AI Innovation</p>
+                
+                <p>I'm on a mission to explore how <strong>Artificial Intelligence is revolutionizing the business landscape</strong> and transforming the way we work. Currently, I'm deeply immersed in understanding the practical applications of AI—not just as a buzzword, but as a powerful tool that can streamline processes, enhance decision-making, and unlock unprecedented growth opportunities.</p>
+                <br>
+                <p>As a <strong>Business Developer & AI Strategist at YugasaBot</strong>, I partner with forward-thinking brands across Fashion, Healthcare, Education, Real Estate, BFSI, eCommerce, and Retail to implement AI-enabled chatbots that don't just automate—they elevate customer experiences, drive conversions, and build lasting relationships.</p>
+                <br>
+                <p>My passion lies in <strong>democratizing AI</strong>—making it accessible and actionable for businesses of all sizes. I believe the future belongs to those who can seamlessly integrate AI into their daily workflows, and I'm dedicated to being at the forefront of this transformation, learning, experimenting, and sharing insights along the way.</p>
+                <br>
+                <p style="font-style: italic; color: #764ba2;">💡 Currently exploring: How AI can transform everyday business processes, from customer engagement to operational efficiency, and everything in between.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Business Development</h3>
+                    <p>Expert in building strategic relationships and driving business growth through innovative solutions and end-to-end sales strategies.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>AI Strategy</h3>
+                    <p>Specializing in AI-enabled chatbots for customer support automation, WhatsApp and Facebook integration, and intelligent 24/7 responses.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Marketing Excellence</h3>
+                    <p>Elevating sales and marketing strategies for D2C brands through strategic chatbot deployment and brand optimization.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Technology Integration</h3>
+                    <p>Seamless integration of multi-lingual chatbots into existing infrastructures across WhatsApp, websites, and Facebook platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h3>Business Developer & Chatbot Strategist - Global</h3>
+                    <h4>Yugasa Bot</h4>
+                    <p class="date">March 2023 - Present | Gurugram, Haryana, India</p>
+                    <ul>
+                        <li>Elevating sales and marketing strategies of D2C brands through AI-enabled chatbots</li>
+                        <li>Collaborating with Marketing Heads and CXOs to optimize branding efforts</li>
+                        <li>Implementing chatbots for promotion on WhatsApp and Facebook CTWA ads</li>
+                        <li>Partnering with technology leaders for seamless YugasaBot integration</li>
+                        <li>Automating customer support with multi-lingual chatbots offering 24/7 intelligent responses</li>
+                        <li>Working with C-Level Executives across Fashion, Healthcare, Education, Real Estate, BFSI, eCommerce, and Retail</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>BNI Member</h3>
+                    <h4>BNI Mumbai - BNI Implacable Chapter</h4>
+                    <p class="date">May 2025 - Present | Thane, Maharashtra, India</p>
+                    <ul>
+                        <li>Actively participate in weekly meetings to exchange quality referrals</li>
+                        <li>Foster strong relationships with local entrepreneurs to enhance business opportunities</li>
+                        <li>Contribute to structured networking environment promoting mutual growth</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Marketing Trainee</h3>
+                    <h4>Yugasa Software</h4>
+                    <p class="date">March 2023 - July 2023 | Gurugram, Haryana, India</p>
+                    <ul>
+                        <li>Gained in-depth knowledge of Marketing concepts and strategies</li>
+                        <li>Learned about the impact of AI-enabled chatbots on business growth</li>
+                        <li>Contributed to marketing campaigns across web development, software development, and chatbot solutions</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Tele-counsellor</h3>
+                    <h4>Career Junction</h4>
+                    <p class="date">September 2022 - December 2022</p>
+                    <ul>
+                        <li>Provided consultancy services to help candidates choose appropriate UG and PG courses</li>
+                        <li>Assisted numerous candidates in making informed decisions about their education paths</li>
+                        <li>Contributed to company revenue growth through effective counseling and support</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Surveyor</h3>
+                    <h4>Educate Girls</h4>
+                    <p class="date">February 2021 - April 2021 | Raebareli, Uttar Pradesh, India</p>
+                    <ul>
+                        <li>Conducted door-to-door surveys to identify dropouts and unenrolled children in villages</li>
+                        <li>Collaborated with government, community, and Team Balika volunteers</li>
+                        <li>Ensured every girl in remote parts of India is enrolled in school and learns well</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h3>Bachelor of Applied Science - B.Sc.</h3>
+                    <h4>Dayanand Bachhrawan P.G. College (CSJM Kanpur University)</h4>
+                    <p class="date">2019 - 2022</p>
+                    <p>Specialization: Computer Applications</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>High School & Intermediate</h3>
+                    <h4>NEW STANDARD PUBLIC SCHOOL</h4>
+                    <p class="date">2012 - 2019</p>
+                    <p>Subjects: Mathematics, Computer Science, Science</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <h4>Learning Microsoft 365 Copilot</h4>
+                </div>
+                <div class="cert-card">
+                    <h4>Streamlining Your Work with Microsoft Copilot</h4>
+                </div>
+                <div class="cert-card">
+                    <h4>Ethics in the Age of Generative AI</h4>
+                </div>
+                <div class="cert-card">
+                    <h4>Generative AI: The Evolution of Thoughtful Online Search</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-info">
+                <p>I'm always open to discussing new opportunities, collaborations, or just having a chat about AI and business innovation.</p>
+                <div class="contact-links">
+                    <a href="mailto:durgasharan97@gmail.com">📧 Email Me</a>
+                    <a href="tel:+919794467846">📱 Call Me</a>
+                    <a href="https://www.linkedin.com/in/durga-sharan" target="_blank">💼 LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Durga Sharan. All rights reserved. | Built with passion and purpose.</p>
+        </div>
+    </footer>
+</body>
+</html>
