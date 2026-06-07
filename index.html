@@ -304,7 +304,7 @@ section{padding:90px 2rem;position:relative;z-index:1;}
   transition:transform .3s,border-color .3s;
 }
 .contact-card:hover{transform:translateY(-6px);border-color:var(--gold-dim);}
-.c-icon{font-size:2rem;margin-bottom:.8rem;display:block;}
+.c-icon{font-size:2rem;margin-bottom:.8rem;display:flex;justify-content:center;align-items:center;}
 .contact-card h3{font-size:.9rem;font-weight:600;color:var(--text-muted);
   text-transform:uppercase;letter-spacing:.1em;margin-bottom:.6rem;}
 .contact-card a{color:var(--gold);text-decoration:none;font-size:.95rem;word-break:break-all;}
@@ -663,22 +663,38 @@ footer{
     <span class="sec-label reveal">Get in Touch</span>
     <h2 class="sec-title reveal">Let's Connect</h2>
     <div class="contact-grid">
-      <div class="contact-card reveal">
-        <span class="c-icon">📧</span>
+      <a href="mailto:durgasharan97@gmail.com" class="contact-card reveal" style="text-decoration:none;display:block;cursor:pointer;">
+        <span class="c-icon">
+          <!-- Gmail official logo -->
+          <svg width="44" height="44" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 39h7V23.25L4 18v18.5C4 37.88 4.63 39 4.5 39z" fill="#4285F4"/>
+            <path d="M36.5 39h7c-.13 0 .5-1.12.5-2.5V18l-7.5 5.25z" fill="#34A853"/>
+            <path d="M36.5 12.5v10.75L44 18v-4c0-3.14-3.58-4.93-6.1-3.05z" fill="#FBBC04"/>
+            <path d="M11.5 23.25V12.5L24 21.5l12.5-9V23.25L24 32.25z" fill="#EA4335"/>
+            <path d="M4 14v4l7.5 5.25V12.5L9.1 10.95C6.58 9.07 4 10.86 4 14z" fill="#C5221F"/>
+          </svg>
+        </span>
         <h3>Email</h3>
-        <a href="mailto:durgasharan97@gmail.com">durgasharan97@gmail.com</a>
-      </div>
-      <div class="contact-card reveal">
-        <span class="c-icon">💬</span>
+      </a>
+      <a href="https://wa.me/919794467846?text=Hi%20Durga%2C%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect!" target="_blank" class="contact-card reveal" style="text-decoration:none;display:block;cursor:pointer;">
+        <span class="c-icon">
+          <!-- WhatsApp official logo -->
+          <svg width="44" height="44" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="22" fill="#25D366"/>
+            <path d="M24 11.5C17.1 11.5 11.5 17.1 11.5 24c0 2.2.6 4.3 1.6 6.1L11.5 36.5l6.6-1.6c1.7.9 3.7 1.4 5.8 1.4 6.9 0 12.5-5.6 12.5-12.5S30.9 11.5 24 11.5zm6.2 17.2c-.3.7-1.5 1.4-2.1 1.5-.6.1-1.1.3-3.7-.8-3.1-1.3-5.1-4.4-5.2-4.6-.2-.2-1.3-1.7-1.3-3.3 0-1.6.8-2.3 1.1-2.7.3-.3.7-.4 1-.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.5 0 .7l-.5.7-.4.5c.2.3 1 1.5 2.1 2.4 1.4 1.1 2.5 1.5 2.9 1.6.3.2.7.1.9-.1l.6-.8c.3-.4.5-.3.9-.2l2.3 1.1c.3.1.5.2.5.4.1.3 0 1.3-.6 2z" fill="#fff"/>
+          </svg>
+        </span>
         <h3>WhatsApp</h3>
-        <a href="https://wa.me/919794467846?text=Hi%20Durga%2C%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect!" target="_blank">Chat on WhatsApp</a>
-      </div>
-      <div class="contact-card reveal">
-        <span class="c-icon">💼</span>
+      </a>
+      <a href="https://www.linkedin.com/in/durga-sharan" target="_blank" class="contact-card reveal" style="text-decoration:none;display:block;cursor:pointer;">
+        <span class="c-icon">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="10" fill="#0A66C2"/>
+            <path d="M14 19h4v15h-4V19zm2-6a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM21 19h4v2.1c.6-1.1 2-2.1 4-2.1 4 0 5 2.6 5 6v9h-4v-8c0-2-.4-3.5-2.3-3.5-2.3 0-2.7 1.7-2.7 3.4V34h-4V19z" fill="#fff"/>
+          </svg>
+        </span>
         <h3>LinkedIn</h3>
-        <a href="https://www.linkedin.com/in/durga-sharan" target="_blank">linkedin.com/in/durga-sharan</a>
-      </div>
-
+      </a>
     </div>
     <div class="cta-strip reveal">
       <h3>Ready to transform your business with AI?</h3>
@@ -689,7 +705,7 @@ footer{
 </section>
 
 <footer>
-  <p>&copy; 2026 Durga Sharan Mishra · AI Business Strategist · Navi Mumbai, India</p>
+  <p>&copy; 2025 Durga Sharan Mishra · AI Business Strategist · Navi Mumbai, India</p>
 </footer>
 
 <script>
