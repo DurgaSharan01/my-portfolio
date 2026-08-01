@@ -310,6 +310,74 @@ section{padding:90px 2rem;position:relative;z-index:1;}
 .contact-card a{color:var(--gold);text-decoration:none;font-size:.95rem;word-break:break-all;}
 .contact-card a:hover{color:var(--gold-light);}
 
+/* ── IMPACT NUMBERS ── */
+#impact{background:var(--navy-mid);}
+.impact-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;
+}
+.impact-card{
+  background:var(--navy-card);border:1px solid var(--navy-border);
+  border-radius:18px;padding:2rem 1.5rem;text-align:center;
+  position:relative;overflow:hidden;
+  transition:transform .3s,border-color .3s;
+}
+.impact-card:hover{transform:translateY(-6px);border-color:var(--gold-dim);}
+.impact-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--cyan));
+}
+.impact-num{
+  font-family:'Playfair Display',serif;
+  font-size:2.6rem;font-weight:900;
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;display:block;margin-bottom:.3rem;
+}
+.impact-lbl{font-size:.82rem;color:var(--text-muted);line-height:1.5;letter-spacing:.04em;}
+
+/* ── CASE STUDIES ── */
+#cases{background:var(--navy);}
+.cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.8rem;}
+.case-card{
+  background:var(--navy-card);border:1px solid var(--navy-border);
+  border-radius:20px;padding:2rem;
+  transition:transform .3s,border-color .3s,box-shadow .3s;
+  position:relative;overflow:hidden;
+}
+.case-card:hover{
+  transform:translateY(-8px);border-color:var(--gold-dim);
+  box-shadow:0 24px 50px rgba(0,0,0,.4);
+}
+.case-tag{
+  font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.3rem .9rem;border-radius:20px;
+  border:1px solid var(--gold-dim);color:var(--gold);
+  background:rgba(201,168,76,.08);display:inline-block;margin-bottom:1.2rem;
+}
+.case-card h3{font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:.8rem;line-height:1.4;}
+.case-card p{font-size:.88rem;color:var(--text-muted);line-height:1.7;margin-bottom:1.2rem;}
+.case-result{
+  background:rgba(0,212,255,.06);border:1px solid var(--cyan-dim);
+  border-radius:10px;padding:.8rem 1rem;
+  font-size:.85rem;color:var(--cyan);font-weight:500;
+}
+.case-result span{font-weight:700;}
+
+/* ── TOOLS STRIP ── */
+#tools{background:var(--navy-mid);}
+.tools-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1.2rem;
+  margin-top:1rem;
+}
+.tool-pill{
+  background:var(--navy-card);border:1px solid var(--navy-border);
+  border-radius:14px;padding:1.2rem .8rem;text-align:center;
+  transition:transform .25s,border-color .25s;cursor:default;
+}
+.tool-pill:hover{transform:translateY(-4px);border-color:var(--gold-dim);}
+.tool-logo{font-size:1.8rem;margin-bottom:.5rem;display:block;}
+.tool-name{font-size:.75rem;color:var(--text-muted);font-weight:500;letter-spacing:.03em;}
+
 /* ── CTA STRIP ── */
 .cta-strip{
   background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(0,212,255,.06));
@@ -364,10 +432,12 @@ footer{
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#impact">Impact</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#cases">Case Studies</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#education">Education</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#certifications">Certs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -398,6 +468,7 @@ footer{
       <div class="hero-btns">
         <a href="#contact" class="btn btn-gold">Let's Connect →</a>
         <a href="#experience" class="btn btn-outline">View Experience</a>
+        <a href="https://www.linkedin.com/in/durga-sharan" target="_blank" class="btn btn-outline" style="border-color:var(--cyan-dim);color:var(--cyan);">↓ Download CV</a>
       </div>
     </div>
     <!-- 3D profile card -->
@@ -457,6 +528,94 @@ footer{
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- IMPACT NUMBERS -->
+<section id="impact">
+  <div class="sec-inner">
+    <span class="sec-label reveal">By the Numbers</span>
+    <h2 class="sec-title reveal">Measurable Impact</h2>
+    <div class="impact-grid">
+      <div class="impact-card reveal">
+        <span class="impact-num">50+</span>
+        <span class="impact-lbl">Business Leaders & CXOs Partnered With</span>
+      </div>
+      <div class="impact-card reveal">
+        <span class="impact-num">9+</span>
+        <span class="impact-lbl">Industries Served Across India & Global</span>
+      </div>
+      <div class="impact-card reveal">
+        <span class="impact-num">3+</span>
+        <span class="impact-lbl">Years in AI Automation & Business Growth</span>
+      </div>
+      <div class="impact-card reveal">
+        <span class="impact-num">2</span>
+        <span class="impact-lbl">AI SaaS Platforms — Yugasa & Minaions</span>
+      </div>
+      <div class="impact-card reveal">
+        <span class="impact-num">∞</span>
+        <span class="impact-lbl">Government Tenders Discovered via Agentic AI</span>
+      </div>
+      <div class="impact-card reveal">
+        <span class="impact-num">100%</span>
+        <span class="impact-lbl">Commitment to Client Growth & ROI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <div class="sec-inner">
+    <span class="sec-label reveal">Real-World Wins</span>
+    <h2 class="sec-title reveal">Case Studies</h2>
+    <div class="cases-grid">
+
+      <div class="case-card reveal">
+        <span class="case-tag">Healthcare · WhatsApp AI</span>
+        <h3>Automated Patient Engagement for a Healthcare Brand</h3>
+        <p>A mid-size healthcare provider was losing leads due to slow response times. Implemented a multilingual WhatsApp AI chatbot to handle appointment booking, FAQs, and follow-ups 24/7 — without adding headcount.</p>
+        <div class="case-result">⚡ <span>Result:</span> Response time reduced from hours to under 60 seconds · Lead drop-off cut significantly</div>
+      </div>
+
+      <div class="case-card reveal">
+        <span class="case-tag">eCommerce · CTWA Ads</span>
+        <h3>WhatsApp Funnel for a D2C eCommerce Brand</h3>
+        <p>Partnered with a D2C brand running Facebook ads but losing conversions at checkout. Designed a Click-to-WhatsApp (CTWA) ad funnel with an AI chatbot handling product queries, offers, and cart recovery.</p>
+        <div class="case-result">📈 <span>Result:</span> Higher ad-to-conversation rate · Repeat purchase engagement automated end-to-end</div>
+      </div>
+
+      <div class="case-card reveal">
+        <span class="case-tag">GovTech · Agentic AI</span>
+        <h3>Tender Discovery Automation for OEM Businesses</h3>
+        <p>At Minaions, onboarded OEM clients who were manually tracking government tenders — a slow, error-prone process. Deployed Agentic AI to auto-discover relevant tenders, analyse eligibility, and draft proposals.</p>
+        <div class="case-result">🏛️ <span>Result:</span> Hours of manual research eliminated · Bid accuracy and submission speed improved</div>
+      </div>
+
+      <div class="case-card reveal">
+        <span class="case-tag">BFSI · Lead Generation</span>
+        <h3>AI-Driven Lead Nurturing for a Financial Services Firm</h3>
+        <p>A BFSI client needed a scalable way to qualify and nurture inbound leads. Built a WhatsApp chatbot workflow that segmented leads by product interest, pre-qualified them with smart questions, and routed hot leads to sales teams instantly.</p>
+        <div class="case-result">💰 <span>Result:</span> Sales team focused only on hot leads · Qualification time reduced drastically</div>
+      </div>
+
+      <div class="case-card reveal">
+        <span class="case-tag">Education · Chatbot Automation</span>
+        <h3>Student Admission Funnel Automation</h3>
+        <p>An education institution was struggling with counsellor bandwidth during admission season. Deployed an AI chatbot on WhatsApp and website to handle course queries, eligibility checks, and application status — round the clock.</p>
+        <div class="case-result">🎓 <span>Result:</span> Counsellor workload reduced · Student response time improved to instant</div>
+      </div>
+
+      <div class="case-card reveal">
+        <span class="case-tag">Real Estate · Engagement</span>
+        <h3>Property Inquiry Automation for Real Estate Developer</h3>
+        <p>A real estate developer with multiple projects was losing inquiry momentum after initial contact. Set up an AI chatbot to share project brochures, schedule site visits, and send follow-up reminders automatically.</p>
+        <div class="case-result">🏠 <span>Result:</span> Site visit scheduling automated · Follow-up consistency improved across all projects</div>
+      </div>
+
+    </div>
+    <p style="text-align:center;margin-top:2rem;font-size:.85rem;color:var(--text-dim);">* Details anonymised to protect client confidentiality</p>
   </div>
 </section>
 
